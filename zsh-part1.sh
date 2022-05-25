@@ -1,12 +1,11 @@
 #!/bin/bash
 
-sudo apt-get update
-
-sudo apt-get -y install zsh
-
 chsh -s $(which zsh)
 
-if command apt > /dev/null; then
+if command apt-get > /dev/null; then
+    sudo apt-get update
+    
+    sudo apt-get -y install zsh
     
     mkdir ~/.fonts
 
